@@ -1,0 +1,51 @@
+{% extends 'base/news_index_base.html' %}
+
+
+{% block title %}
+    下载文档
+{% endblock %}
+
+
+{% block link %}
+      <link rel="stylesheet" href="../../static/css/doc/docDownload.css">
+      <link rel="stylesheet" href="../../static/css/base/side.css">
+{% endblock %}
+
+
+{% block main-contain %}
+    <div class="main-contain ">
+        <div class="banner">
+            <img src="/media/doc_banner_1.jpg" alt="">
+        </div>
+        <div class="pay-doc-contain">
+            <ul class="pay-list">
+
+                {% for doc in docs %}
+
+                    <li class="pay-item">
+                        <img src="{{ doc.image_url }}" class="pay-img doc"/>
+                        <div class="d-contain">
+                            <p class="doc-title">{{ doc.title }}</p>
+                            <p class="doc-desc">{{ doc.desc }}</p>
+
+                            <a href="{% url 'doc:download' doc.id %}" class="pay-price">下载</a>
+                        </div>
+                    </li>
+
+                {% endfor %}
+
+            </ul>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block script %}
+    <script src="../../static/js/index.js"></script>
+{% endblock %}
+
+
+
+
+
+

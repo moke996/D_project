@@ -1,0 +1,4 @@
+# 指定根据表中的哪些字段建立索引数据
+{{ object.title }}      # 根据标题建立索引
+{{ object.digest }}     # 根据摘要建立索引
+{{ object.content }}    # 根据内容建立索引

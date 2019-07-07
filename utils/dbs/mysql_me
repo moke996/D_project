@@ -1,0 +1,7 @@
+[client]
+database = django_pj
+user = moke
+password = qwe123
+host = 192.168.42.131
+port = 3306
+default-character-set = utf8
